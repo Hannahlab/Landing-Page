@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking - My Hobby👩🏻‍🍳</title>
+    <style>
+      body {
+        background: pink;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 10px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid pink;
+        background: pink;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: transparent;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .theme-button {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .AfricanCuisine-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+        background: black;
+        width: 100%;
+      }
+
+      .AfricanCuisine-intro-picture:hover {
+        filter: contrast(50%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out, filter 2000ms ease-in;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: #17153b;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>Cooking</h1>
+      <h2>My Favorite Hobby</h2>
+      <a
+        href="https://en.wikipedia.org/wiki/Nigerian_cuisine"
+        target="_blank"
+      ></a>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/236/original/e2993fd21189b3bdae04bd910ccac355.jpg?1724164444"
+        alt=""
+        class="AfricanCuisine-intro-picture"
+      />
+
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/403/original/istockphoto-1448028228-612x612.jpg?1724257772"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/405/original/istockphoto-1327486548-612x612.jpg?1724257816"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/407/original/istockphoto-498310978-612x612.jpg?1724257846"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/406/original/istockphoto-1091151430-612x612.jpg?1724257832"
+          alt=""
+        />
+      </div>
+
+      <p>
+        Cooking is more than just a hobby for me; it's my true passion. I find
+        immense joy in experimenting with flavors, creating new dishes, and
+        sharing my culinary creations with others. The kitchen is my creative
+        space, where I can express myself and connect with people through the
+        love of food. Whether I’m trying out a new recipe or perfecting an old
+        favorite, cooking brings me a sense of fulfillment and happiness that
+        nothing else can match.
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Nigerian_cuisine"
+        >Learn More On wikipedia</a
+      >
+    </div>
+    <footer>
+      Coded by💓
+      <a
+        href="https://www.linkedin.com/in/hannah-camacho-7747b72a0/"
+        target="_blank"
+        >Diana Camacho</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
